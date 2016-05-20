@@ -38,18 +38,19 @@ group :development do
   gem "letter_opener"
   gem "bullet"
   gem "web-console", "~> 2.0"
+  gem "brakeman"
 end
 
 group :development, :test do
   gem "pry"
   gem "pry-byebug"
   gem "awesome_print", require: "ap"
+  gem "rspec-rails", "~> 3.4"
   # gem "httplog" # Note: uncomment and bundle to see api calls, if needed.
 end
 
 group :test do
   gem "factory_girl_rails"
-  gem "rspec-rails", "~> 3.0"
   gem "mocha"
   gem "database_cleaner"
 
