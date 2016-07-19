@@ -11,8 +11,17 @@ Rails.application.configure do
   config.eager_load = true
 
   # Full error reports are disabled and caching is turned on.
-  config.consider_all_requests_local       = false
+  config.consider_all_requests_local = false
   config.action_controller.perform_caching = true
+
+  # Mailer configuration
+  # config.action_mailer.default_url_options = { host: "something.do.lark-it.com" }
+  # config.action_mailer.raise_delivery_errors = true
+  # config.action_mailer.delivery_method = :smtp
+  # config.action_mailer.asset_host = "http://ccp-prodapp-01.do.lark-it.com"
+
+  # To use url helpers in workers
+  # Rails.application.routes.default_url_options = { host: "something.do.lark-it.com" }
 
   # Enable Rack::Cache to put a simple HTTP cache in front of your application
   # Add `rack-cache` to your Gemfile before enabling this.

@@ -15,6 +15,7 @@
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 
+require "sidekiq/testing"
 require "simplecov"
 
 SimpleCov.formatters = [
