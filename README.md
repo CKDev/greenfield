@@ -13,6 +13,7 @@ that we don't need to discuss each choice that has been made in the past.
 * Run `bundle install`
 * Configure Redis - TODO:
 * Configure Sidekiq - TODO:
+* Fix all TODOs in code, as there are several spots that need project specific information.
 
 ## Replace this README with application specific information below.
 

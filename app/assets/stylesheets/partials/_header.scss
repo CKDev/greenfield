@@ -1,0 +1,30 @@
+header {
+  min-height: 40px;
+  padding: 20px 0;
+  margin-bottom: 2em;
+  overflow: hidden;
+
+  .links {
+    text-align: left;
+
+    @media (min-width: 550px) {
+      text-align: right;
+    }
+  }
+
+  a {
+    padding-left: 7px;
+    padding-right: 7px;
+    color: $dark-blue;
+    text-decoration: none;
+    font-weight: bold;
+
+    &.active {
+      color: $green;
+    }
+  }
+
+  a:hover {
+    color: $light-blue;
+  }
+}

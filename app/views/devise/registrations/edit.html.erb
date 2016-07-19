@@ -13,7 +13,9 @@
   <% end %>
 
   <div>
-    <%= f.label :password %> <i>(leave blank if you don't want to change it)</i>
+    <%= f.label :password do %>
+      Password <i>(leave blank if you don't want to change it)</i>
+    <% end %>
     <%= f.password_field :password, autocomplete: "off" %>
   </div>
 
@@ -23,11 +25,14 @@
   </div>
 
   <div>
-    <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i>
+    <%= f.label :current_password do %>
+      Current Password <i>(we need your current password to confirm your changes)</i>
+    <% end %>
     <%= f.password_field :current_password, autocomplete: "off" %>
   </div>
 
   <div>
     <%= f.submit "Update" %>
   </div>
+
 <% end %>
