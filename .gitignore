@@ -19,7 +19,6 @@
 .DS_Store
 *.rbc
 capybara-*.html
-.rspec
 /log
 /tmp
 /coverage
