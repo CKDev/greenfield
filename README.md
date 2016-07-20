@@ -34,7 +34,7 @@ that we don't need to discuss each choice that has been made in the past.
 2.3.1
 
 ## Rails Version
-4.2.6
+4.2.7
 
 ## System dependencies
 * Redis
