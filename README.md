@@ -7,13 +7,24 @@ that we don't need to discuss each choice that has been made in the past.
 ## Starting a new project using this template
 
 * Clone this project from Github
-  - git clone https://github.com/CKDev/greenfield.git
-* Create a new gemset with 'rvm gemset create <project name>'
+  * have a repo ready for the new project
+  * make a new directory with the new project name, cd into that directory
+  * `git clone git@github.com:CKDev/greenfield.git .` (with the .)
+  * update the remote links from greenfield to the new project
+    * `git remote rm origin`
+    * `git remote add origin git@github.com:<new-project-repo>.git`
 * Change .ruby-gemset for new project name
+* Create a new gemset with 'rvm gemset create <project name>' or just cd out and back into the directory
+* `gem install bundler` if not in your global gems
 * Run `bundle install`
+* Update database.yml.example with your credentials, rename to database.yml
+* Update secrets.yml.example with valid SendGrid credentials, rename to secrets.yml
+* Create a new secrets key in secrets.yml with `rake secret`
+* Run `rake db:create db:migrate db:seed`
+* Fix all TODOs in code, as there are several spots that need project specific information.
+* Find all locations of "greenfield" and replace.
 * Configure Redis - TODO:
 * Configure Sidekiq - TODO:
-* Fix all TODOs in code, as there are several spots that need project specific information.
 
 ## Replace this README with application specific information below.
 
@@ -33,6 +44,7 @@ that we don't need to discuss each choice that has been made in the past.
 
 * Update database.yml.example with your credentials
 * Run `rake db:create db:migrate db:seed`
+* Run `RAILS_ENV=test rake db:create db:migrate`
 
 ## Testing
 

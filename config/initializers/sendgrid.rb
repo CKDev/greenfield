@@ -5,7 +5,7 @@ password = Rails.application.secrets.sendgrid_password
 domain = Rails.application.secrets.sendgrid_domain || "commercekitchen.com" # TODO: change this to project domain.
 
 if login.nil? && password.nil?
-  abort("Please ensure the sendgrid_login and sendgrid_password are defined in secrets.yml")
+  abort "Please ensure the sendgrid_login and sendgrid_password are defined in secrets.yml"
 else
   ActionMailer::Base.smtp_settings = {
     user_name: login,
