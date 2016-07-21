@@ -60,8 +60,6 @@ group :development, :test do
   gem "pry-byebug"
   # extent pry into rails c
   gem "pry-rails"
-  # allow debugger like navigation within pry console
-  gem "pry-nav"
   gem "awesome_print", require: "ap"
   gem "rspec-rails", "~> 3.4"
   # gem "httplog" # Note: uncomment and bundle to see api calls, if needed.
