@@ -40,9 +40,7 @@ gem "local_time" # Client-side timezone rendering
 # gem "whenever", require: false # Cron scheduling
 # gem "paper_trail" # Model auditing
 # gem "business_time" # For calculating number of business days
-
-# Pagination
-gem "will_paginate"
+# gem "will_paginate" # Pagination
 
 group :development do
   gem "rubocop", require: false
