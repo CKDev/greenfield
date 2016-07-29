@@ -55,13 +55,11 @@ end
 
 group :development, :test do
   gem "pry"
-  # allow debugger like navigation within pry console
-  gem "pry-byebug"
-  # extent pry into rails c
-  gem "pry-rails"
+  gem "pry-byebug" # Allow debugger-like navigation within pry console
+  gem "pry-rails" # Extend pry into rails c
   gem "awesome_print", require: "ap"
   gem "rspec-rails", "~> 3.4"
-  # gem "httplog" # Note: uncomment and bundle to see api calls, if needed.
+  # gem "httplog" # To view api calls.
 end
 
 group :test do
