@@ -26,6 +26,19 @@ that we don't need to discuss each choice that has been made in the past.
 * Configure Redis - TODO:
 * Configure Sidekiq - TODO:
 
+### Initial Deployment
+* Make sure the :repo_url is updated in deploy.rb.
+* Make sure the staging and development servers are ready, and that you can ssh into them.
+* Run cap staging deploy once to setup the directory structure. This will fail for a few reasons, but it helps to have a starting point to work with.
+* Login to the staging server.
+  * Create the secrets.yml file with appropriate stage.
+  * Go into any of the releases directories (there's probably only one, and current won't be set up yet).
+    * Run `RAILS_ENV=staging bundle install` to get all dependencies.
+    * Run `RAILS_ENV=staging rake db:create` to create the initial database.
+* Back locally, run `cap staging deploy` again.  This should have better results.
+* Update the secret_key_base in secrets.yml on the server, by running `RAILS_ENV=staging rake secret`
+* Repeat for Production.
+
 ## Replace this README with application specific information below.
 
 # Running Greenfield Locally
