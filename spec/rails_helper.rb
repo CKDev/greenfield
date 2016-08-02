@@ -33,10 +33,8 @@ RSpec.configure do |config|
   # instead of true.
   config.use_transactional_fixtures = false # Set to false when using database_cleaner
 
-  # => include devise test helpers
-  config.include Devise::TestHelpers, type: :controller
-  config.include Devise::TestHelpers, type: :view
-  config.include Devise::TestHelpers, type: :helper
+  # Include devise test helpers
+  config.include Devise::Test::ControllerHelpers, type: :controller
 
   # Fixture file upload methods
   include ActionDispatch::TestProcess
